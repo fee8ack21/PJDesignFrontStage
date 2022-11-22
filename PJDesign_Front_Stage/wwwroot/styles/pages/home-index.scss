@@ -283,6 +283,7 @@
 
     &__type8 {
         @include type-padding;
+        overflow-x: hidden;
 
         &-title {
             @include type-title;
@@ -337,6 +338,7 @@
 
     &__type9 {
         @include type-padding;
+        overflow-x: hidden;
 
         &-title {
             @include type-title;
