@@ -12,6 +12,22 @@
         height: 200px;
         object-fit: cover;
         object-position: center;
+
+        @include media-sm {
+            height: 220px;
+        }
+
+        @include media-md {
+            height: 260px;
+        }
+
+        @include media-lg {
+            height: 200px;
+        }
+
+        @include media-xl {
+            height: 220px;
+        }
     }
 
     &__date {

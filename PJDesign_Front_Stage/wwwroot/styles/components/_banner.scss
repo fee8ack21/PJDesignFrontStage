@@ -10,24 +10,16 @@
 
     &__title {
         color: $tertiary-color;
-        font-size: 32px;
+        font-size: $font-size-xl;
         font-weight: $weight-bold;
         letter-spacing: 5px;
-
-        @include media-lg {
-            font-size: 40px;
-        }
     }
 
     &__sub-title {
         margin-bottom: 0px;
         color: $tertiary-color;
-        font-size: 24px;
+        font-size: $font-size-l;
         font-weight: $weight-bold;
         letter-spacing: 5px;
-
-        @include media-lg {
-            font-size: 24px;
-        }
     }
 }

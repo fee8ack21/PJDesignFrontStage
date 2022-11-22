@@ -13,7 +13,7 @@ function handleWarningModal() {
     Modal.layoutModal.hideCloseIcon();
     Modal.layoutModal.setIfOverlayClickable(false);
     Modal.layoutModal.setTitle('系統通知');
-    Modal.layoutModal.setContent('提醒您，本站僅為測試用，切勿採用本站任何資訊。')
+    Modal.layoutModal.setContent('提醒您，本站僅為練習用，切勿採用本站任何資訊。')
     Modal.layoutModal.setConfirmBtnCb(function () {
         CookieHelper.setCookie('isWarningRead', true, 1);
     })

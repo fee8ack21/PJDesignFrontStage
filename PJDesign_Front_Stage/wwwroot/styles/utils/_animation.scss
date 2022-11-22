@@ -14,7 +14,7 @@
 
 .left-fade-in-on-scroll {
     @include fade-in-on-scroll;
-    transform: translateX(-60px);
+    transform: translateX(-15px);
 
     &.active {
         transform: translateX(0px);
@@ -23,7 +23,7 @@
 
 .right-fade-in-on-scroll {
     @include fade-in-on-scroll;
-    transform: translateX(60px);
+    transform: translateX(15px);
 
     &.active {
         transform: translateX(0px);
