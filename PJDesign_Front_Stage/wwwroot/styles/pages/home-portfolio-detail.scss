@@ -1,0 +1,122 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.home-portfolio-detail {
+    &__date {
+        display: inline-block;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid #ad9179;
+        font-size: $font-size-sm;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    &__content {
+        margin-bottom: 60px;
+    }
+    &__horizontal-line {
+        height: 1px;
+        margin: 15px 0px;
+        border: none;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    &__tag-wrap {
+    }
+
+    &__tag {
+        display: inline-block;
+        padding: 3px 5px;
+        font-size: $font-size-sm;
+        color: rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+
+        &:hover {
+            color: rgba(0, 0, 0, 0.6);
+            text-decoration: none;
+        }
+
+        @include media-md {
+            margin-right: 10px;
+        }
+    }
+
+    &__page-option-wrap {
+        position: relative;
+        display: flex;
+    }
+
+    &__link {
+        position: absolute;
+        top: 0px;
+        font-size: $font-size-sm;
+        color: rgba(0, 0, 0, 0.4);
+        transition: $speed-normal;
+        cursor: pointer;
+
+        &:hover {
+            color: rgba(0, 0, 0, 0.6);
+            text-decoration: none;
+        }
+
+        &--prev {
+            left: 0px;
+        }
+
+        &--back {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &--next {
+            right: 0px;
+        }
+    }
+
+    &__swapper-wrap {
+        margin: 60px auto 0px auto;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+
+        @include media-lg {
+            width: 800px;
+        }
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .swiper-pagination-bullet {
+        width: 12px !important;
+        height: 12px !important;
+        margin-left: 5px !important;
+        margin-right: 5px !important;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $secondary-color;
+    }
+}

@@ -1,0 +1,84 @@
+﻿@using PJDesign_Front_Stage.Models.VCModel
+@using PJDesign_Front_Stage.ViewComponents
+<link rel="stylesheet" href="~/styles/pages/service-question.css">
+
+<section class="service-question">
+    @await Component.InvokeAsync(nameof(Banner),new BannerVCModel {ChTitle = "常見問題", EngTitle = "Question", ImageUrl = "/images/test/1.webp"})
+    <div class="container">
+        <nav class="service-question__tab-list-wrap">
+            <ul class="service-question__tab-list">
+                <li class="service-question__tab-list-item">
+                    <a href="" data-type="1"
+                       class="js-service-question-tab-list-link service-question__tab-list-link active">種類一</a>
+                </li>
+                <li class="service-question__tab-list-item">
+                    <a href="" data-type="2"
+                       class="js-service-question-tab-list-link service-question__tab-list-link">種類二</a>
+                </li>
+                <li class="service-question__tab-list-item">
+                    <a href="" data-type="3"
+                       class="js-service-question-tab-list-link service-question__tab-list-link">種類三</a>
+                </li>
+            </ul>
+        </nav>
+        <nav class="service-question__mobile-tab-list-wrap">
+            <a class="js-service-question-mobile-tab-list-target service-question__mobile-tab-list-target" data-type="1">種類一</a>
+            <ul class="js-service-question-mobile-tab-list service-question__mobile-tab-list">
+                <li class="service-question__mobile-tab-list-item">
+                    <a href="" data-type="1"
+                       class="js-service-question-mobile-tab-list-link service-question__mobile-tab-list-link">種類一</a>
+                </li>
+                <li class="service-question__mobile-tab-list-item">
+                    <a href="" data-type="2"
+                       class="js-service-question-mobile-tab-list-link service-question__mobile-tab-list-link">種類二</a>
+                </li>
+                <li class="service-question__mobile-tab-list-item">
+                    <a href="" data-type="3"
+                       class="js-service-question-mobile-tab-list-link service-question__mobile-tab-list-link">種類三</a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="service-question__list">
+            <li class="service-question__list-item">
+                <a class="js-service-question-link service-question__list-link" data-index="1" data-status="＋">項目一</a>
+                <div class="js-service-question-content service-question__list-content" data-index="1">
+                    <div class="service-question__list-content-inner">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi amet vel mollitia libero
+                        repudiandae, quia accusamus suscipit ducimus corporis ullam voluptates blanditiis
+                        perspiciatis velit praesentium inventore minima accusantium, ea fugit numquam.
+                        Consectetur
+                        soluta dicta, animi quo totam quaerat. Deleniti perspiciatis ipsum animi, reprehenderit
+                        consequatur consectetur sint commodi assumenda minus, magnam rem praesentium? Pariatur
+                        quas
+                        delectus deleniti eveniet molestias amet eius cum nihil! Aliquam quaerat laborum facere
+                        temporibus, nulla facilis excepturi placeat nostrum expedita provident et velit, minima
+                        iure, eius exercitationem nemo architecto adipisci distinctio! Culpa error laudantium,
+                        tempora officia, hic minus expedita fugit voluptates beatae dolores facere vero unde
+                        laboriosam?
+                    </div>
+                </div>
+            </li>
+            <li class="service-question__list-item">
+                <a class="js-service-question-link service-question__list-link" data-index="2" data-status="＋">項目二</a>
+                <div class="js-service-question-content service-question__list-content" data-index="2">
+                    <div class="service-question__list-content-inner">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi amet vel mollitia libero
+                        repudiandae, quia accusamus suscipit ducimus corporis ullam voluptates blanditiis
+                        perspiciatis velit praesentium inventore minima accusantium, ea fugit numquam.
+                        Consectetur
+                        soluta dicta, animi quo totam quaerat. Deleniti perspiciatis ipsum animi, reprehenderit
+                        consequatur consectetur sint commodi assumenda minus, magnam rem praesentium? Pariatur
+                        quas
+                        delectus deleniti eveniet molestias amet eius cum nihil! Aliquam quaerat laborum facere
+                        temporibus, nulla facilis excepturi placeat nostrum expedita provident et velit, minima
+                        iure, eius exercitationem nemo architecto adipisci distinctio! Culpa error laudantium,
+                        tempora officia, hic minus expedita fugit voluptates beatae dolores facere vero unde
+                        laboriosam?
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<script src="~/js/views/service/question.js"></script>

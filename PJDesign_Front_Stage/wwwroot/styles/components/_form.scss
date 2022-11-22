@@ -1,0 +1,64 @@
+.form {
+    width: 100%;
+    padding: 60px 40px;
+    border-top: 5px solid $secondary-color;
+    box-shadow: 0px 2px 16px 0px #00000021;
+    background-color: $tertiary-color;
+
+    &__group {
+        margin-bottom: 15px;
+    }
+
+    &__input,
+    &__textarea {
+        -webkit-appearance: none;
+        outline: none;
+        &::-moz-placeholder {
+            color: rgba(31, 31, 31, 0.5);
+        }
+
+        &:-ms-input-placeholder {
+            color: rgba(31, 31, 31, 0.5);
+        }
+
+        &::-webkit-input-placeholder {
+            color: rgba(31, 31, 31, 0.5);
+        }
+
+        &:focus {
+        }
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        outline: none;
+        color: $primary-color;
+    }
+
+    &__textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        outline: none;
+        color: $primary-color;
+        resize: none;
+    }
+
+    &__submit {
+        width: 100%;
+        padding: 10px;
+        border: none;
+        outline: none;
+        background-color: $secondary-color;
+        color: $tertiary-color;
+        transition: $speed-normal;
+
+        &:hover {
+            color: $tertiary-color;
+            background-color: darken($secondary-color, 5%);
+        }
+    }
+}

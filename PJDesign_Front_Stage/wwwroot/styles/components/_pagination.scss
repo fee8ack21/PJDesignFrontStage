@@ -1,0 +1,36 @@
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__link {
+        display: inline-block;
+        width: 27px;
+        height: 27px;
+        margin: 0px 7px;
+        color: $tertiary-color;
+        font-size: $font-size-sm;
+        text-align: center;
+        line-height: 27px;
+        background-color: rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+
+        &.active {
+            background-color: $secondary-color;
+        }
+
+        &:hover {
+            color: $tertiary-color;
+            text-decoration: none;
+        }
+    }
+
+    &__ignore {
+        display: inline-block;
+        width: 27px;
+        height: 27px;
+        margin: 0px 7px;
+        text-align: center;
+        line-height: 27px;
+    }
+}

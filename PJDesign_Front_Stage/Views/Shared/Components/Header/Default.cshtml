@@ -1,0 +1,78 @@
+﻿<header class="js-header main-header">
+    <div class="main-header__menu">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="main-header__logo">
+                    <h1>
+                        <a class="main-header__logo-link" href="/">
+                            <img class="main-header__logo-image" src="~/images/logos/logo.svg" alt="">
+                        </a>
+                    </h1>
+                </div>
+                <nav class="js-header-list-wrap main-header__list-wrap">
+                    <ul class="main-header__list">
+                        <li class="main-header__list-item">
+                            <a data-index="1" class="js-header-list-link main-header__list-link" asp-controller="Home" asp-action="Index">首頁</a>
+                        </li>
+                        <li class="main-header__list-item">
+                            <a data-index="2" class="js-header-list-link main-header__list-link" asp-controller="Unit" asp-action="Type1">關於我們</a>
+                        </li>
+                        <li class="main-header__list-item">
+                            <a data-index="3" class="js-header-list-link main-header__list-link" asp-controller="Home" asp-action="Portfolio">作品集</a>
+                        </li>
+                        <li class="main-header__list-item">
+                            <a data-index="4" class="js-header-list-link main-header__list-link"
+                               asp-controller="Unit" asp-action="Type2">活動快訊</a>
+                        </li>
+                        <li class="main-header__list-item">
+                            <a data-index="5" class="js-header-list-link main-header__list-link"
+                               asp-controller="Unit" asp-action="Type2">知識部落格</a>
+                        </li>
+                        <li class="main-header__list-item">
+                            <a data-index="6" data-status="＋" class="js-header-list-link main-header__list-link" 
+                            href="javascript:void(0)">客戶服務</a>
+                            <div data-index="6"
+                                 class="js-header-mobile-sub-list-wrap main-header__mobile-sub-list-wrap">
+                                <ul class="main-header__mobile-sub-list">
+                                    <li class="main-header__mobile-sub-list-item">
+                                        <a class="main-header__mobile-sub-list-link" asp-controller="Service" asp-action="Question">常見問題</a>
+                                    </li>
+                                    <li class="main-header__mobile-sub-list-item">
+                                        <a class="main-header__mobile-sub-list-link" asp-controller="Service" asp-action="Contact">聯絡我們</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="main-header__list-mask"></div>
+                </nav>
+                <div class="main-header__burger">
+                    <a href="" class="js-header-burger-link main-header__burger-link">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- desktop -->
+    <nav class="js-header-desktop-sub-list-wrap main-header__desktop-sub-list-wrap">
+        <div class="main-header__desktop-sub-list-inner">
+            <div class="container position-relative">
+                <ul data-index="6" class="js-header-desktop-sub-list main-header__desktop-sub-list">
+                    <li class="main-header__desktop-sub-list-item">
+                        <a class="main-header__desktop-sub-list-link" asp-controller="Service" asp-action="Question">常見問題</a>
+                    </li>
+                    <li class="main-header__desktop-sub-list-item">
+                        <a class="main-header__desktop-sub-list-link" asp-controller="Service" asp-action="Contact">聯絡我們</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="js-header-mobile-mask main-header__mobile-mask"> </div>
+</header>
+
+<script src="~/js/view-components/header.js"></script>

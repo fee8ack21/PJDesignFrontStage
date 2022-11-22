@@ -1,0 +1,74 @@
+@keyframes blink {
+    to {
+        background: rgba(0, 0, 0, 0.2);
+    }
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 0.8;
+    }
+}
+
+.loader {
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $tertiary-color;
+    opacity: 0;
+    visibility: hidden;
+    transition: 1.2s linear;
+
+    &.active {
+        z-index: 2;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__image {
+        width: 100px;
+        margin-bottom: 15px;
+        visibility: visible;
+        opacity: 0;
+        animation: fade-in 1000ms 0.5s forwards;
+    }
+
+    &__wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 211px;
+        margin-top: -100px;
+    }
+
+    &__text {
+        position: absolute;
+        bottom: -70px;
+        left: 0px;
+        margin-top: 20px;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 26px;
+        font-weight: $weight-bold;
+        letter-spacing: 10px;
+        white-space: nowrap;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: -12px;
+            top: 3px;
+            bottom: 0px;
+            width: 5px;
+            background-color: rgba(0, 0, 0, 1);
+            animation: blink 600ms steps(13) forwards infinite;
+        }
+    }
+}

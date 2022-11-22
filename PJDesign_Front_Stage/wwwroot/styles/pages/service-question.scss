@@ -1,0 +1,183 @@
+@import "../abstracts/variables";
+@import "../abstracts/mixins";
+
+.service-question {
+    padding-bottom: 80px;
+
+    &__tab-list-wrap {
+        display: none;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        @include media-md {
+            display: block;
+        }
+    }
+
+    &__tab-list {
+        display: flex;
+        padding: 0px;
+        list-style: none;
+
+        &-item {
+            width: 100%;
+        }
+
+        &-link {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 5px;
+            background-color: #f3f4f4;
+            transition: $speed-normal;
+
+            &:hover {
+                color: rgba(0, 0, 0, 0.6);
+                text-decoration: none;
+            }
+
+            &.active {
+                color: $tertiary-color;
+                background-color: $secondary-color;
+            }
+        }
+    }
+
+    &__mobile-tab-list-wrap {
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        @include media-md {
+            display: none;
+        }
+    }
+
+    &__mobile-tab-list-target {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        padding: 15px;
+        color: $tertiary-color;
+        background-color: $secondary-color;
+        text-align: center;
+        cursor: pointer;
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            width: 13px;
+            height: 13px;
+            transform: translateY(calc(-50% + 2px));
+            background-image: url("/images/icons/arrow_down_white.svg");
+            background-repeat: no-repeat;
+            background-size: 13px 13px;
+            background-position: center center;
+            transition: $speed-normal;
+        }
+
+        &:hover {
+            color: $tertiary-color;
+            text-decoration: none;
+        }
+
+        &.active {
+            &::before {
+                transform: translateY(calc(-50% + 2px)) rotate(180deg);
+            }
+        }
+    }
+
+    &__mobile-tab-list {
+        max-height: 0px;
+        padding: 0px;
+        list-style: none;
+        overflow-y: hidden;
+        transition: $speed-normal max-height linear;
+
+        &.active {
+            max-height: 200px;
+        }
+
+        &-item {
+            width: 100%;
+        }
+
+        &-link {
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            color: rgba(0, 0, 0, 0.6);
+            font-weight: bold;
+            text-align: center;
+            letter-spacing: 5px;
+            background-color: #f3f4f4;
+            transition: $speed-normal;
+
+            &:hover {
+                color: rgba(0, 0, 0, 0.6);
+                text-decoration: none;
+            }
+
+            &.hide {
+                display: none;
+            }
+        }
+    }
+
+    &__list {
+        padding: 0px;
+        margin-bottom: 0px;
+        list-style: none;
+
+        &-item {
+            width: 100%;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        &-link {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            padding: 15px;
+            color: $primary-color;
+            cursor: pointer;
+
+            &:hover {
+                color: $primary-color;
+                text-decoration: none;
+            }
+
+            &::before {
+                content: attr(data-status);
+                position: absolute;
+                top: 50%;
+                right: 0px;
+                transform: translateY(-50%);
+                font-size: 18px;
+                color: $secondary-color;
+            }
+        }
+
+        &-content {
+            max-height: 0px;
+            overflow-y: hidden;
+            background-color: #fafafa;
+            transition: $speed-normal max-height linear;
+
+            &.active {
+                max-height: 300px;
+            }
+        }
+
+        &-content-inner {
+            padding: 15px;
+        }
+    }
+}

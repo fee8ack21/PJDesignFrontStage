@@ -1,0 +1,27 @@
+.btn {
+    border: none;
+    outline: none;
+    padding: 10px;
+    min-width: 100px;
+    transition: $speed-normal;
+
+    &--primary {
+        background-color: $secondary-color;
+        color: $tertiary-color;
+
+        &:hover {
+            color: $tertiary-color;
+            background-color: darken($secondary-color, 5%);
+        }
+    }
+
+    &--secondary {
+        background-color: #f3f4f4;
+        color: rgba(0, 0, 0, 0.6);
+
+        &:hover {
+            color: $tertiary-color;
+            background-color: darken(#f3f4f4, 5%);
+        }
+    }
+}

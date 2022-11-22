@@ -1,0 +1,33 @@
+﻿@using PJDesign_Front_Stage.Models.VCModel
+@using PJDesign_Front_Stage.ViewComponents
+
+<link rel="stylesheet" href="~/styles/pages/unit-detail2.css">
+
+<section class="unit-detail2">
+    @await Component.InvokeAsync(nameof(Banner),new BannerVCModel {ChTitle = "活動快訊", EngTitle = "Event", ImageUrl = "/images/test/1.webp"})
+    <div class="container" style="padding-top: 60px;padding-bottom:60px;">
+        <div class="unit-detail2__image-wrap">
+            <img class="unit-detail2__image" src="~/images/test/1.webp" />
+        </div>
+        <div class="unit-detail2__content-wrap">
+            <span class="unit-detail2__date">2022/11/15</span>
+            <h3 class="unit-detail2__title">測試標題</h3>
+            <div class="unit-detail2__content">
+                聯準會11月利率決議如市場預期升息3碼，儘管暗示升息速度將放緩但鷹派論調仍使市場下行風險再度攀升；然而隨市場預期共和黨可望於美國期中選舉中獲得眾議院掌控權，意味著未來美國經濟刺激法案推動難度提升將有利於牽制美國舉債上限，通膨亦可望避免惡化；再者，美國10月消費者物價指數年增幅不僅低於市場預期，亦較前值8.2%明顯趨緩至7.7%，正向數據皆提升經濟軟著陸的可能性。
+            </div>
+            <div class="unit-detail2__tag-wrap">
+                <a href="" class="unit-detail2__tag">#分類一</a>
+                <a href="" class="unit-detail2__tag">#分類二</a>
+                <a href="" class="unit-detail2__tag">#標籤一</a>
+                <a href="" class="unit-detail2__tag">#標籤二</a>
+                <a href="" class="unit-detail2__tag">#標籤三</a>
+            </div>
+            <hr class="unit-detail2__horizontal-line" />
+            <div class="unit-detail2__page-option-wrap">
+                <a class="unit-detail2__link unit-detail2__link--prev">上一個</a>
+                <a class="unit-detail2__link unit-detail2__link--back">返回列表頁</a>
+                <a class="unit-detail2__link unit-detail2__link--next">下一個</a>
+            </div>
+        </div>
+    </div>
+</section>
