@@ -1,0 +1,37 @@
+﻿@using PJDesignFrontStage.Models.VCModel
+@using PJDesignFrontStage.ViewComponents
+<link rel="stylesheet" href="~/styles/vendors/swiper-bundle.min.css">
+<link rel="stylesheet" href="~/styles/pages/home-portfolio-detail.css">
+
+<section class="home-portfolio-detail">
+    @await Component.InvokeAsync(nameof(Banner), new BannerVCModel {ChTitle = "作品集", EngTitle = "Portfolio", ImageUrl = "/images/test/1.webp"})
+    <div class="container" style="padding-top: 60px;padding-bottom:60px;">
+        <div class="home-portfolio-detail__content-wrap">
+            <span class="home-portfolio-detail__date">2022/11/15</span>
+            <h3 class="home-portfolio-detail__title">億達昌網路商店</h3>
+            <div class="home-portfolio-detail__content">
+                <div class="home-portfolio-detail__swapper-wrap">
+                    <div class="js-portfolio-swiper swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="~/images/test/portfolio_1_1.jpg" /></div>
+                            <div class="swiper-slide"><img src="~/images/test/portfolio_1_2.jpg" /></div>
+                            <div class="swiper-slide"><img src="~/images/test/portfolio_1_3.jpg" /></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-portfolio-detail__tag-wrap">
+                <a href="" class="home-portfolio-detail__tag">#分類一</a>
+                <a href="" class="home-portfolio-detail__tag">#分類二</a>
+            </div>
+            <hr class="home-portfolio-detail__horizontal-line" />
+            <div class="home-portfolio-detail__page-option-wrap">
+                <a class="home-portfolio-detail__link home-portfolio-detail__link--back">返回列表頁</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="~/js/vendors/swiper-bundle.min.js"></script>
+<script src="~/js/views/home/portfolio-detail.js"></script>

@@ -1,0 +1,41 @@
+﻿@using PJDesignFrontStage.Models.VCModel
+@using PJDesignFrontStage.ViewComponents
+
+<section class="home-contact">
+    @await Component.InvokeAsync(nameof(Banner),new BannerVCModel {ChTitle = "聯絡我們", EngTitle = "Contact Us", ImageUrl = "/images/test/1.webp"})
+    <div class="container" style="margin-top: -30px;">
+        <section class="form">
+            <div class="row">
+                <div class="col-12 col-lg-8 order-2 order-lg-1">
+                    <div style="width: 100%;overflow:hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.994696639104!2d121.56211679643631!3d25.034254044257413!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb6da80a7ad%3A0xacc4d11dc963103c!2z5Y-w5YyXMTAx6LO854mp5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1668494045880!5m2!1szh-TW!2stw"
+                                width="800" height="509" style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 order-1 order-lg-2">
+                    <div class="form__group">
+                        <input type="text" class="form__input" placeholder="姓名*">
+                    </div>
+                    <div class="form__group">
+                        <input type="text" class="form__input" placeholder="電話*">
+                    </div>
+                    <div class="form__group">
+                        <input type="text" class="form__input" placeholder="信箱*">
+                    </div>
+                    <div class="form__group">
+                        <textarea class="form__textarea" placeholder="問題與建議*" name="" id="" cols="30"
+                                  rows="10"></textarea>
+                    </div>
+                    <div class="form__group">
+                        <button class="js-submit-btn form__submit">
+                            送出
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</section>
+
+<script src="~/js/views/service/contact.js"></script>
