@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Home\**" />
+    <Compile Remove="Models\Service\**" />
+    <Compile Remove="Models\Unit\**" />
+    <Content Remove="Models\Home\**" />
+    <Content Remove="Models\Service\**" />
+    <Content Remove="Models\Unit\**" />
+    <EmbeddedResource Remove="Models\Home\**" />
+    <EmbeddedResource Remove="Models\Service\**" />
+    <EmbeddedResource Remove="Models\Unit\**" />
+    <None Remove="Models\Home\**" />
+    <None Remove="Models\Service\**" />
+    <None Remove="Models\Unit\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\js\views\unit\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

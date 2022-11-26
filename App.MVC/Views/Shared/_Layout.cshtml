@@ -1,0 +1,40 @@
+﻿@using App.MVC.Models.VCModel
+@using App.MVC.ViewComponents
+
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PJ設計</title>
+    <link rel="shortcut icon" href="~/favicon.ico">
+    <link rel="stylesheet" href="~/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+            integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+    </script>
+</head>
+<body>
+    @await Component.InvokeAsync(nameof(Header))
+
+    <main class="main-main">
+        @RenderBody()
+    </main>
+
+    @await Component.InvokeAsync(nameof(Footer))
+    @await Component.InvokeAsync(nameof(GoToBtn))
+    @*@await Component.InvokeAsync(nameof(PageLoader))*@
+    @await Component.InvokeAsync(nameof(Modal), new ModalVCModel{Name = "layout"})
+
+    <script type="module" src="~/js/main.js"></script>
+    <script src="~/js/helpers/fade-in-on-scroll.js"></script>
+</body>
+</html>

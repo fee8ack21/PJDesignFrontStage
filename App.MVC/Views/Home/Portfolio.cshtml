@@ -1,0 +1,152 @@
+﻿@using App.MVC.Models.VCModel
+@using App.MVC.ViewComponents
+<link rel="stylesheet" href="~/styles/pages/home-portfolio.css">
+
+<section class="home-portfolio">
+    @await Component.InvokeAsync(nameof(Banner), new BannerVCModel {ChTitle = "作品集", EngTitle = "Portfolio", ImageUrl = "/images/test/1.webp"})
+    <div class="container" style="padding-top: 60px;padding-bottom:60px;">
+        @await Component.InvokeAsync(nameof(SearchBar))
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-item__inner-wrap">
+                        <a class="portfolio-item__link" href="/Home/Portfolio/1">
+                            <img class="portfolio-item__image" src="~/images/test/portfolio_1.jpg" />
+                            <span class="portfolio-item__hint">
+                                <span class="portfolio-item__hint-inner-wrap">億達昌網路商店</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-item__inner-wrap">
+                        <a class="portfolio-item__link" href="/Home/Portfolio/1">
+                            <img class="portfolio-item__image" src="~/images/test/portfolio_2.jpg" />
+                            <span class="portfolio-item__hint">
+                                <span class="portfolio-item__hint-inner-wrap">
+                                    泓德能源
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-item__inner-wrap">
+                        <a class="portfolio-item__link" href="/Home/Portfolio/1">
+                            <img class="portfolio-item__image" src="~/images/test/portfolio_3.jpg" />
+                            <span class="portfolio-item__hint">
+                                <span class="portfolio-item__hint-inner-wrap">
+                                    協力旺
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-item__inner-wrap">
+                        <a class="portfolio-item__link" href="/Home/Portfolio/1">
+                            <img class="portfolio-item__image" src="~/images/test/portfolio_4.jpg" />
+                            <span class="portfolio-item__hint">
+                                <span class="portfolio-item__hint-inner-wrap">
+                                    九洲國際食品有限公司
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-item__inner-wrap">
+                        <a class="portfolio-item__link" href="/Home/Portfolio/1">
+                            <img class="portfolio-item__image" src="~/images/test/portfolio_5.jpg" />
+                            <span class="portfolio-item__hint">
+                                <span class="portfolio-item__hint-inner-wrap">
+                                    牡羊座創意空間
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-item__inner-wrap">
+                        <a class="portfolio-item__link" href="/Home/Portfolio/1">
+                            <img class="portfolio-item__image" src="~/images/test/portfolio_6.jpg" />
+                            <span class="portfolio-item__hint">
+                                <span class="portfolio-item__hint-inner-wrap">
+                                    舒優美國際股份有限公司
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-item__inner-wrap">
+                        <a class="portfolio-item__link" href="/Home/Portfolio/1">
+                            <img class="portfolio-item__image" src="~/images/test/portfolio_7.jpg" />
+                            <span class="portfolio-item__hint">
+                                <span class="portfolio-item__hint-inner-wrap">
+                                    沛立維
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-item__inner-wrap">
+                        <a class="portfolio-item__link" href="/Home/Portfolio/1">
+                            <img class="portfolio-item__image" src="~/images/test/portfolio_8.jpg" />
+                            <span class="portfolio-item__hint">
+                                <span class="portfolio-item__hint-inner-wrap">
+                                    王品
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-item__inner-wrap">
+                        <a class="portfolio-item__link" href="/Home/Portfolio/1">
+                            <img class="portfolio-item__image" src="~/images/test/portfolio_9.jpg" />
+                            <span class="portfolio-item__hint">
+                                <span class="portfolio-item__hint-inner-wrap">
+                                    偏愛去旅行
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="portfolio-item">
+                    <div class="portfolio-item__inner-wrap">
+                        <a class="portfolio-item__link" href="/Home/Portfolio/1">
+                            <img class="portfolio-item__image" src="~/images/test/portfolio_10.jpg" />
+                            <span class="portfolio-item__hint">
+                                <span class="portfolio-item__hint-inner-wrap">
+                                    世衡法律事務所
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @await Component.InvokeAsync(nameof(Pagination))
+    </div>
+</section>
+<script src="~/js/views/home/portfolio.js"></script>

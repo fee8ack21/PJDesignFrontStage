@@ -1,0 +1,20 @@
+﻿@using App.MVC.Models.VCModel
+@using App.MVC.ViewComponents
+
+<link rel="stylesheet" href="~/styles/pages/unit-type2.css">
+
+<section class="unit-type2">
+    @await Component.InvokeAsync(nameof(Banner),new BannerVCModel {ChTitle = "活動快訊", EngTitle = "Event", ImageUrl = "/images/test/1.webp"})
+    <div class="container" style="padding-top: 60px;padding-bottom:60px;">
+        @await Component.InvokeAsync(nameof(SearchBar))
+        @await Component.InvokeAsync(nameof(Type2List))
+        <div class="show-more">
+            <a href="#" class="show-more__link">
+                顯示更多
+                <img class="show-more__image" src="~/images/icons/arrow_right_brown.svg" />
+            </a>
+        </div>
+    </div>
+</section>
+
+<script src="~/js/views/unit/type2-list.js"></script>
