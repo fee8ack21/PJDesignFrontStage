@@ -15,7 +15,6 @@ namespace App.MVC.ViewComponents
 
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var a = _context.TblEftests.ToList();
             return View();
         }
     }

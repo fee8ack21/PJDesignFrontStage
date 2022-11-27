@@ -20,7 +20,6 @@ namespace App.MVC.Controllers
         {
             using (var c = new PjdesignContext())
             {
-                var a = c.TblEftests.ToList();
             }
 
             return View();
