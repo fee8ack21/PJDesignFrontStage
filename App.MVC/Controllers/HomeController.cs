@@ -1,27 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using App.MVC.Models;
-using App.MVC.Models.EFModel;
 using System.Diagnostics;
+using Microsoft.Extensions.Logging;
 
 namespace App.MVC.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private PjdesignContext _context;
 
-        public HomeController(ILogger<HomeController> logger, PjdesignContext context)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _context = context;
         }
 
         public IActionResult Index()
         {
-            using (var c = new PjdesignContext())
-            {
-            }
-
             return View();
         }
 
