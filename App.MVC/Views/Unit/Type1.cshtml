@@ -2,8 +2,8 @@
 @using App.MVC.ViewComponents
 
 <section class="unit-type1">
-    @await Component.InvokeAsync(nameof(Banner),new BannerVCModel{ChTitle = "關於我們", EngTitle = "About Us", ImageUrl = "/images/test/1.webp"})
-    <div class="container" style="padding:60px 0px;">
-        關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們關於我們
+    @await Component.InvokeAsync(nameof(Banner),new BannerVCModel{ChTitle = "Type1 單元", EngTitle = "Type1 Unit", ImageUrl = "/images/test/banner.png"})
+    <div class="container" style="padding-top:60px;padding-bottom:60px;">
+        <h2>此區塊為Type1 編輯器內容。</h2>
     </div>
 </section>

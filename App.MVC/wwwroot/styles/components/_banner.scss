@@ -1,8 +1,10 @@
 .banner {
     padding: 50px 0px;
-    background: linear-gradient(rgba(37, 37, 37, 0.6), rgba(37, 37, 37, 0.6)) 0% 0% / cover no-repeat fixed,
-        url("/images/test/2.jpg");
-    background-attachment: fixed;
+    background-color: linear-gradient(rgba(37, 37, 37, 0.6), rgba(37, 37, 37, 0.6)) 0% 0%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("/images/test/2.jpg");
 
     @include media-lg {
         padding: 80px 0px;

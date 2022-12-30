@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="~/styles/pages/home-portfolio.css">
 
 <section class="home-portfolio">
-    @await Component.InvokeAsync(nameof(Banner), new BannerVCModel {ChTitle = "作品集", EngTitle = "Portfolio", ImageUrl = "/images/test/1.webp"})
+    @await Component.InvokeAsync(nameof(Banner), new BannerVCModel {ChTitle = "作品集", EngTitle = "Portfolio", ImageUrl = "/images/test/banner.png"})
     <div class="container" style="padding-top: 60px;padding-bottom:60px;">
         @await Component.InvokeAsync(nameof(SearchBar))
         <div class="row">

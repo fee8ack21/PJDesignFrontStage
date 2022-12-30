@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="~/styles/pages/home-portfolio-detail.css">
 
 <section class="home-portfolio-detail">
-    @await Component.InvokeAsync(nameof(Banner), new BannerVCModel {ChTitle = "作品集", EngTitle = "Portfolio", ImageUrl = "/images/test/1.webp"})
+    @await Component.InvokeAsync(nameof(Banner), new BannerVCModel {ChTitle = "作品集", EngTitle = "Portfolio", ImageUrl = "/images/test/banner.png"})
     <div class="container" style="padding-top: 60px;padding-bottom:60px;">
         <div class="home-portfolio-detail__content-wrap">
             <span class="home-portfolio-detail__date">2022/11/15</span>
@@ -27,7 +27,7 @@
             </div>
             <hr class="home-portfolio-detail__horizontal-line" />
             <div class="home-portfolio-detail__page-option-wrap">
-                <a class="home-portfolio-detail__link home-portfolio-detail__link--back">返回列表頁</a>
+                <a class="home-portfolio-detail__link home-portfolio-detail__link--back" asp-controller="Home" asp-action="Portfolio">返回列表頁</a>
             </div>
         </div>
     </div>

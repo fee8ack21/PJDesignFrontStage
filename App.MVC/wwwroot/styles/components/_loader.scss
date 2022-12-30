@@ -26,7 +26,7 @@
     transition: 1.2s linear;
 
     &.active {
-        z-index: 2;
+        z-index: 999;
         opacity: 1;
         visibility: visible;
     }

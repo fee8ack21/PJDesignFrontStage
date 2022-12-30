@@ -30,8 +30,20 @@
     </main>
 
     @await Component.InvokeAsync(nameof(Footer))
-    @await Component.InvokeAsync(nameof(GoToBtn))
-    @*@await Component.InvokeAsync(nameof(PageLoader))*@
+
+    <a href="" class="js-go-to-btn go-to-btn">
+        <img class="go-to-btn__icon" src="/images/icons/arrow_down_white.svg" alt="">
+    </a>
+    <script src="~/js/view-components/go-to-btn.js"></script>
+    <div class="js-loader loader active">
+        <div class="loader__wrap">
+            <img class="loader__image" src="/images/logos/logo.svg" alt="">
+            <p class="loader__text"></p>
+        </div>
+    </div>
+
+    <script src="~/js/view-components/loader.js"></script>
+
     @await Component.InvokeAsync(nameof(Modal), new ModalVCModel{Name = "layout"})
 
     <script type="module" src="~/js/main.js"></script>

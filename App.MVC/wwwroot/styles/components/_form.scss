@@ -13,19 +13,28 @@
     &__textarea {
         -webkit-appearance: none;
         outline: none;
+        transition: $speed-normal;
+
         &::-moz-placeholder {
             color: rgba(31, 31, 31, 0.5);
+            transition: $speed-normal;
         }
 
         &:-ms-input-placeholder {
             color: rgba(31, 31, 31, 0.5);
+            transition: $speed-normal;
         }
 
         &::-webkit-input-placeholder {
             color: rgba(31, 31, 31, 0.5);
+            transition: $speed-normal;
         }
 
         &:focus {
+            border-color: rgba(31, 31, 31, 1);
+            &::-webkit-input-placeholder {
+                color: rgba(31, 31, 31, 1);
+            }
         }
     }
 

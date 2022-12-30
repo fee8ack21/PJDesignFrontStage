@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="~/styles/pages/unit-type2.css">
 
 <section class="unit-type2">
-    @await Component.InvokeAsync(nameof(Banner),new BannerVCModel {ChTitle = "活動快訊", EngTitle = "Event", ImageUrl = "/images/test/1.webp"})
+    @await Component.InvokeAsync(nameof(Banner),new BannerVCModel {ChTitle = "Type2 單元", EngTitle = "Type2 Unit", ImageUrl = "/images/test/banner.png"})
     <div class="container" style="padding-top: 60px;padding-bottom:60px;">
         @await Component.InvokeAsync(nameof(SearchBar))
         @await Component.InvokeAsync(nameof(Type2List))

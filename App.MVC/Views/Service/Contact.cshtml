@@ -2,7 +2,7 @@
 @using App.MVC.ViewComponents
 
 <section class="home-contact">
-    @await Component.InvokeAsync(nameof(Banner),new BannerVCModel {ChTitle = "聯絡我們", EngTitle = "Contact Us", ImageUrl = "/images/test/1.webp"})
+    @await Component.InvokeAsync(nameof(Banner),new BannerVCModel {ChTitle = "聯絡我們", EngTitle = "Contact Us", ImageUrl = "/images/test/banner.png"})
     <div class="container" style="margin-top: -30px;">
         <section class="form">
             <div class="row">
@@ -38,4 +38,4 @@
     </div>
 </section>
 
-<script src="~/js/views/service/contact.js"></script>
+<script type="module" src="~/js/views/service/contact.js"></script>

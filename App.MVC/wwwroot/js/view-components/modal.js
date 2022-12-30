@@ -1,6 +1,6 @@
 export class Modal {
     _defaultTitle = '系統通知';
-    _defaultContent = '';
+    _defaultContent = [''];
 
     _isOverlayClickable = true;
     _activeClass = 'active';
@@ -35,8 +35,15 @@ export class Modal {
         this.element.find('.modal__title').text(title);
     }
 
-    setContent(content) {
-        this.element.find('.modal__body').text(content);
+    setContent(texts) {
+        if (!Array.isArray(texts)) { return; }
+
+        let html = '';
+        texts.forEach(text => {
+            html += `<p>${text}</p>`;
+        })
+
+        this.element.find('.modal__body').html(html);
     }
 
     showCloseIcon() {
