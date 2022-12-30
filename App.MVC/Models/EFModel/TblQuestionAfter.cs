@@ -6,8 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace App.MVC.Models.EFModel;
 
-[Table("tblAdministrator")]
-public partial class TblAdministrator
+[Table("tblQuestionAfter")]
+public partial class TblQuestionAfter
 {
     /// <summary>
     /// 流水號
@@ -17,25 +17,23 @@ public partial class TblAdministrator
     public int CId { get; set; }
 
     /// <summary>
-    /// 帳號
+    /// 標題
     /// </summary>
-    [Column("cAccount")]
+    [Column("cTitle")]
     [StringLength(50)]
-    public string CAccount { get; set; } = null!;
+    public string CTitle { get; set; } = null!;
 
     /// <summary>
-    /// 密碼
+    /// 問題編輯器內容
     /// </summary>
-    [Column("cPassword")]
-    [StringLength(50)]
-    public string CPassword { get; set; } = null!;
+    [Column("cContent")]
+    public string? CContent { get; set; }
 
     /// <summary>
-    /// 名稱
+    /// 最近的編輯人員ID
     /// </summary>
-    [Column("cName")]
-    [StringLength(50)]
-    public string CName { get; set; } = null!;
+    [Column("cEditorId")]
+    public int CEditorId { get; set; }
 
     /// <summary>
     /// 創建時間
@@ -44,15 +42,21 @@ public partial class TblAdministrator
     public DateTime CCreateDt { get; set; }
 
     /// <summary>
+    /// 最近的編輯時間
+    /// </summary>
+    [Column("cEditDt", TypeName = "datetime")]
+    public DateTime CEditDt { get; set; }
+
+    /// <summary>
+    /// 創建人員ID
+    /// </summary>
+    [Column("cCreatorId")]
+    public int CCreatorId { get; set; }
+
+    /// <summary>
     /// 是否啟用
     /// </summary>
     [Required]
     [Column("cIsEnabled")]
     public bool? CIsEnabled { get; set; }
-
-    /// <summary>
-    /// 嘗試登入次數
-    /// </summary>
-    [Column("cLoginAttemptCount")]
-    public int CLoginAttemptCount { get; set; }
 }

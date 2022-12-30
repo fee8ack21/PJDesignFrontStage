@@ -6,8 +6,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace App.MVC.Models.EFModel;
 
-[Table("tblAdministrator")]
-public partial class TblAdministrator
+[Table("tblCategory")]
+public partial class TblCategory
 {
     /// <summary>
     /// 流水號
@@ -17,25 +17,17 @@ public partial class TblAdministrator
     public int CId { get; set; }
 
     /// <summary>
-    /// 帳號
-    /// </summary>
-    [Column("cAccount")]
-    [StringLength(50)]
-    public string CAccount { get; set; } = null!;
-
-    /// <summary>
-    /// 密碼
-    /// </summary>
-    [Column("cPassword")]
-    [StringLength(50)]
-    public string CPassword { get; set; } = null!;
-
-    /// <summary>
-    /// 名稱
+    /// 標籤/分類名稱
     /// </summary>
     [Column("cName")]
     [StringLength(50)]
     public string CName { get; set; } = null!;
+
+    /// <summary>
+    /// 所屬單元ID
+    /// </summary>
+    [Column("cUnitId")]
+    public int CUnitId { get; set; }
 
     /// <summary>
     /// 創建時間
@@ -50,9 +42,6 @@ public partial class TblAdministrator
     [Column("cIsEnabled")]
     public bool? CIsEnabled { get; set; }
 
-    /// <summary>
-    /// 嘗試登入次數
-    /// </summary>
-    [Column("cLoginAttemptCount")]
-    public int CLoginAttemptCount { get; set; }
+    [Column("cEditDt", TypeName = "datetime")]
+    public DateTime CEditDt { get; set; }
 }
