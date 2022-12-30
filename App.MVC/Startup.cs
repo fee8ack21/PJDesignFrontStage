@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,7 +26,10 @@ namespace App.MVC
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<PJDesignContext>();
+            services.AddDbContext<PJDesignContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("PJDesign"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

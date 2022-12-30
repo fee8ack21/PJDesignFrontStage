@@ -23,6 +23,13 @@
     </script>
 </head>
 <body>
+    <div class="js-loader loader active">
+        <div class="loader__wrap">
+            <img class="loader__image" src="/images/logos/logo.svg" alt="">
+            <p class="loader__text"></p>
+        </div>
+    </div>
+
     @await Component.InvokeAsync(nameof(Header))
 
     <main class="main-main">
@@ -34,12 +41,7 @@
     <a href="" class="js-go-to-btn go-to-btn">
         <img class="go-to-btn__icon" src="/images/icons/arrow_down_white.svg" alt="">
     </a>
-    <div class="js-loader loader active">
-        <div class="loader__wrap">
-            <img class="loader__image" src="/images/logos/logo.svg" alt="">
-            <p class="loader__text"></p>
-        </div>
-    </div>
+
     @await Component.InvokeAsync(nameof(Modal), new ModalVCModel{Name = "layout"})
 
     <script type="module" src="~/js/main.js"></script>

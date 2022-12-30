@@ -11,6 +11,7 @@
 
     &__input,
     &__textarea {
+        border-radius: 0px;
         -webkit-appearance: none;
         outline: none;
         transition: $speed-normal;

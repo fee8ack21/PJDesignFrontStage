@@ -100,6 +100,16 @@
             &-text {
                 margin-bottom: 0px;
                 font-size: $font-size-sm;
+
+                a {
+                    color: $primary-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $primary-color;
+                        text-decoration: none;
+                    }
+                }
             }
         }
     }
