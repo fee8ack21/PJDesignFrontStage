@@ -19,18 +19,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Content Remove="wwwroot\styles\*.scss" />
-	  <Content Remove="wwwroot\styles\**\*.scss" />
-	</ItemGroup>
-
-	<ItemGroup>
 		<Folder Include="wwwroot\js\views\unit\" />
 	</ItemGroup>
-
-	<ItemGroup>
-	  <None Include="wwwroot\styles\*.scss" />
-	  <None Include="wwwroot\styles\**\*.scss" />
-	</ItemGroup>
+	
+    <ItemGroup>
+      <Content Remove="wwwrootSrc\**" />
+    </ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.32" />

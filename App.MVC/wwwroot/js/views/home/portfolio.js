@@ -1,17 +1,1 @@
-
-$(function () {
-    handleMansory();
-})
-
-
-function handleMansory() {
-    const $grid = $('.grid').masonry({
-        itemSelector: '.grid-item',
-        percentPosition: true,
-        columnWidth: '.grid-sizer'
-    });
-
-    $grid.imagesLoaded().progress(function () {
-        $grid.masonry();
-    });
-}
+function handleMansory(){const n=$(".grid").masonry({itemSelector:".grid-item",percentPosition:!0,columnWidth:".grid-sizer"});n.imagesLoaded().progress(function(){n.masonry()})}$(function(){handleMansory()});
