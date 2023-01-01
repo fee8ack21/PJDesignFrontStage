@@ -26,13 +26,15 @@
         transition: $speed-slow;
         cursor: pointer;
 
-        &:hover {
-            border-color: rgba(0, 0, 0, 0.2);
+        @include media-lg {
+            &:hover {
+                border-color: rgba(0, 0, 0, 0.2);
 
-            .portfolio-item__hint {
-                width: 200%;
-                height: 300%;
-                opacity: 1;
+                .portfolio-item__hint {
+                    width: 200%;
+                    height: 300%;
+                    opacity: 1;
+                }
             }
         }
     }
